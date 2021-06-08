@@ -1,12 +1,75 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  height: 120px;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-iconlogo {
+  padding-top: 20px;
 }
+
+.navbar-icon {
+  color: #FF978E;
+  margin-left: 30px;
+}
+
+.navbar-logo {
+  width: auto;
+  max-height: 140px;
+  padding-bottom: 20px;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  margin-right: 16px;
+  border-radius: 4px;
+  background: #FF978E;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #FBC251;
+  color: white;
+}
+
+.logout-icon {
+  color: #FF978E;
+}
+
+.avatar {
+  margin-right: 30px;
+}
+
+
+.search-form-control {
+  position: relative;
+  width: 500px;
+  margin-top: 16px;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  border-radius: 32px;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+  border-radius: 32px;
+}
+
+.search-form-control .form-control:focus {
+  border: 1px solid #FF978E;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
