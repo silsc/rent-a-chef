@@ -1,0 +1,17 @@
+<div class="container mx-2 mt-2 text-center">
+  <h2> Popular Chefs near you </h2>
+  <div class="row mx-2">
+    <div.col-6 mx-1 mt-1>
+      <% @chefs.each do |chef| %>
+        <div class="card d-block p-4">
+          <div>
+            <h3> <%= chef.name %> </h3>
+            <p> <%= chef.location %></p>
+            <p> <%= chef.description %> </p>
+            <p><strong> <%= chef.price %> EUR </strong></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
