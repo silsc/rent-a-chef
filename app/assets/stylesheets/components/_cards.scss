@@ -17,3 +17,68 @@
   grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
   grid-gap: 8px;
 }
+
+
+/* CARD - CHEFS */
+
+.avatar-bordered {
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: #FBC251 2px solid;
+}
+
+.card-chef {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 20%;
+  margin: auto;
+  border-radius: 24px;
+}
+
+// .card-chef :hover {
+//   border: #FBC251 2px solid;
+// }
+
+.card-chef > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-chef h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-chef p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-chef .card-chef-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-chef-infos .card-chef-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-chef-category {
+  text-align: right;
+  padding-right: 16px;
+  padding-bottom: 5px;
+}
+
+
