@@ -13,6 +13,7 @@ class ChefsController < ApplicationController
 
   def create
     @chef = Chef.new(chef_params)
+    @chef.user = current_user
     if @chef.save
       redirect_to chef_path(@chef)
     else
