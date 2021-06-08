@@ -1,0 +1,19 @@
+/* CARD - CATEGORIES */
+
+.card-category {
+  background-position: center;
+  height: 160px;
+  width: 150px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.30);
+  background: #F7F7F7;
+  border: 1px solid #E5E5E5;
+  margin: auto;
+  object-fit: scale-down;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+  grid-gap: 8px;
+}
