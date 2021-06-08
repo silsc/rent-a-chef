@@ -14,7 +14,7 @@ class ChefsController < ApplicationController
   def create
     @chef = Chef.new(chef_params)
     if @chef.save
-      redirect_to @chef
+      redirect_to chef_path(@chef)
     else
       render :new
     end
