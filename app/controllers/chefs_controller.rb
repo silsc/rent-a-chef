@@ -1,4 +1,5 @@
 class ChefsController < ApplicationController
+  before_action :authenticate_user!, only: %i[new create]
   def index
     @chefs = Chef.all
     @markers = @chefs.geocoded.map do |chef|
@@ -20,7 +21,7 @@ class ChefsController < ApplicationController
   def create
     @chef = Chef.new(chef_params)
     @chef.user = current_user
-    if @chef.save
+    if @chef.save!
       redirect_to chef_path(@chef)
     else
       render :new
