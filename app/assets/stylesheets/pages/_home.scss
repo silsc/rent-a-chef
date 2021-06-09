@@ -1,1 +1,60 @@
 // Specific CSS for your home-page
+.navbar-landing {
+  justify-content: space-between;
+  height: 120px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.navbar-landing .navbar-collapse {
+  flex-grow: 0;
+}
+
+.landing-container {
+  height: 300px;
+  display: inline-block;
+}
+
+.full-banner-landing {
+  max-width: 100%;
+}
+
+.big-logo {
+  height: 550px;
+}
+
+.half-banner-landing {
+  background: #FBC251;
+  height: 550px;
+  border-bottom-left-radius: 80px;
+  color: white;
+}
+
+.food-landing-icon {
+  position: relative;
+  top: 80px;
+}
+
+.big-logo {
+  width: 40em;
+  height: auto;
+}
+
+.instruction-card {
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.30);
+  background: #FBC251;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #E5E5E5;
+  margin: auto;
+  object-fit: scale-down;
+}
+
+
+
+
+
