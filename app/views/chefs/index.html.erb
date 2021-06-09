@@ -1,20 +1,26 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/banner' %>
-<div class="container mx-2 mt-2 text-center">
+<div class="container mx-2 mt-2">
+  <h2>Browse by category</h2>
+  <%= render 'shared/categories' %>
   <h2> Popular Chefs near you </h2>
   <div class="row mx-2">
     <div class="col-6 mx-1 mt-1">
       <% @chefs.each do |chef| %>
-        <div class="card d-block p-4">
+      <div class="card-chef">
+        <img src="https://images.unsplash.com/photo-1587116861219-230ac19df971?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2468&q=80" />
+        <div class="card-chef-infos">
           <div>
-            <h3> <%=link_to chef.name, chef_path(chef) %> </h3>
-            <p> <%= chef.location %></p>
-            <p> <%= chef.description %> </p>
-            <p><strong> <%= chef.price %> EUR </strong></p>
+            <h2><%= link_to chef.name, chef_path(chef) %></h2>
+            <p><%= chef.location %></p>
           </div>
+          <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZnxlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="card-chef-user avatar-bordered" />
         </div>
+        <div>
+          <h6 class="card-chef-category">Italian Food</h6>
+        </div>
+      </div>
       <% end %>
     </div>
   </div>
 </div>
-
