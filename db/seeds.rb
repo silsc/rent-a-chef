@@ -9,6 +9,10 @@ Review.destroy_all
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create!(email: 'carlos.mix@gmail.com', password: 'password')
 
+chef = Chef.create!(user: user, name: 'Gordon', location: 'London', description: 'amazing food', price: 200)
+booking = Booking.create!(user: user, chef: chef, start_date: Date.today, end_date: Date.today + 10)
+review = Review.create!(content: 'interesting', rating: 5, booking: booking)
+
 puts "Creating chefs"
 chefs = []
 file = URI.open('https://files.thehandbook.com/uploads/2014/10/Gordon-Ramsay.jpg')
