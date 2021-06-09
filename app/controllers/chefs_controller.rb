@@ -1,10 +1,10 @@
 class ChefsController < ApplicationController
   def index
     @chefs = Chef.all
-    @markers = @flats.geocoded.map do |flat|
+    @markers = @chefs.geocoded.map do |chef|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: chef.latitude,
+        lng: chef.longitude
       }
     end
   end
