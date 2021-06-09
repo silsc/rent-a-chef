@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="col-6">
-      <%= @chef.photo %> <!-- we need to add the photo -->
+      <%= cl_image_tag @chef.photo.key, class: "img-show" %>
     </div>
   </div>
 </div>
