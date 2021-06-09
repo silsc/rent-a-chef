@@ -1,6 +1,12 @@
 class ChefsController < ApplicationController
   def index
     @chefs = Chef.all
+    @markers = @chefs.geocoded.map do |chef|
+      {
+        lat: chef.latitude,
+        lng: chef.longitude
+      }
+    end
   end
 
   def show
@@ -24,6 +30,6 @@ class ChefsController < ApplicationController
   private
 
   def chef_params
-    params.require(:chef).permit(:name, :price, :location, :description, :photo)
+    params.require(:chef).permit(:name, :price, :location, :description, :photo, :avatar)
   end
 end

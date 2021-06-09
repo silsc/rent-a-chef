@@ -1,11 +1,28 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/banner' %>
-<div class="container m-3">
-  <h3><%= @chef.name %> </h3>
-  <p><%= @chef.location %> </p>
-  <p><%= @chef.description %> </p>
-  <p><strong> <%= @chef.price %> EUR</strong></p>
 
-  <p><%= link_to 'Back to list', chefs_path, class: "btn-flat"%></p>
+<div class="container col-12 mb-3">
+  <div class="row">
+    <div class="col-6">
+      <div class="chef-info">
+        <h2><%= @chef.name %> </h2>
+        <div class="d-flex">
+          <i class="fas fa-map-marker-alt pr-2 icon-chef p-1"></i>
+          <p><%= @chef.location %> </p>
+        </div>
+        <div class="d-flex mb-2">
+          <i class="fas fa-dollar-sign pr-2 icon-chef p-1"></i>
+          <p><%= @chef.price %> </p>
+        </div>
+        <h4>About me</h4>
+          <p><%= @chef.description %> </p>
+      </div>
+    </div>
+    <div class="col-6">
+      <%= @chef.photo %> <!-- we need to add the photo -->
+    </div>
+  </div>
 </div>
+
+<%= link_to 'Back to list', chefs_path, class: "btn-flat button-back-chef"%>
 
