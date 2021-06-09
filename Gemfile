@@ -34,8 +34,6 @@ gem 'simple_form'
 
 gem 'devise'
 
-gem 'dotenv-rails', groups: %i[development test]
-
 gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do
