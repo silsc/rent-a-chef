@@ -3,27 +3,33 @@
 <div class="px-4">
   <h2>Browse by category</h2>
   <%= render 'shared/categories' %>
-<div class="my-5">
-  <h2> Popular Chefs near you </h2>
-  <div class="d-flex  justify-content-between ">
-    <% @chefs.each do |chef| %>
-      <div class="card-chef mr-5">
-        <%= cl_image_tag chef.photo.key%>
-        <!-- <img src="https://images.unsplash.com/photo-1587116861219-230ac19df971?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2468&q=80" /> -->
-
-
-        <div class="card-chef-infos">
-          <div>
-            <h2><%= link_to chef.name, chef_path(chef) %></h2>
-            <p><%= chef.location %></p>
+  <div class="my-5">
+    <h2> Popular Chefs near you </h2>
+    <div class="d-flex  justify-content-between ">
+      <% @chefs.each do |chef| %>
+        <div class="card-chef mr-5">
+          <!-- <img src="https://images.unsplash.com/photo-1587116861219-230ac19df971?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2468&q=80" /> -->
+          <% if chef.photo.attached? %>
+            <%= cl_image_tag chef.photo.key %>
+          <% else %>
+            <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
+          <% end %>
+          <div class="card-chef-infos">
+            <div>
+              <h2><%= link_to chef.name, chef_path(chef) %></h2>
+              <p><%= chef.location %></p>
+            </div>
+            <!-- <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZnxlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="card-chef-user avatar-bordered" /> -->
+            <% if chef.avatar.attached? %>
+              <%= cl_image_tag chef.avatar.key, class:"card-chef-user avatar-bordered" %>
+            <% else %>
+              <img class="card-chef-user avatar-bordered" src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
+            <% end %>
           </div>
-          <%= cl_image_tag chef.photo.key, class:"card-chef-user avatar-bordered" %>
-          <!-- <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZnxlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="card-chef-user avatar-bordered" /> -->
+          <div>
+            <h6 class="card-chef-category">Italian Food</h6>
+          </div>
         </div>
-        <div>
-          <h6 class="card-chef-category">Italian Food</h6>
-        </div>
-      </div>
         <!-- <div class="card-chef-infos">
           <div class="card d-block p-4">
             <%# <div> %>
@@ -37,15 +43,13 @@
           </div>
           <h6 class="card-chef-category">Italian Food</h6>
         </div> -->
-      <!-- </div> -->
-    <% end %>
+        <!-- </div> -->
+      <% end %>
+    </div>
   </div>
 </div>
-</div>
-
-    <div id="map"
+<div id="map"
        style="width: 100%; height: 600px;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-
+</div>
