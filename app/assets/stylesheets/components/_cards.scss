@@ -78,6 +78,13 @@ a:hover {
   object-fit: cover;
 }
 .card-chef-category {
-  text-align: right;
-  padding: 8px;
+  align-items: right;
+}
+
+.badge {
+  color: white;
+  text-shadow: silver;
+  background-color: #ff978eef;
+  text-align: center;
+  font-weight: 600;
 }
