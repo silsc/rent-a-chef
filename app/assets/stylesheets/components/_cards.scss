@@ -36,10 +36,17 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 20%;
-  min-width: 200px;
-  margin: auto;
+  width: 215px;
   border-radius: 24px;
+  color:black;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .card-chef > img {
@@ -52,12 +59,18 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: #FF978E;
+  text-align: left;
 }
 
 .card-chef p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  text-align: left;
+  i {
+    color: #FF978E;
+  }
 }
 
 
@@ -80,8 +93,9 @@
 
 .card-chef-category {
   text-align: right;
-  padding-right: 16px;
-  padding-bottom: 5px;
+  padding: 8px;
+//   background-color: #ff978eef;
 }
+
 
 
