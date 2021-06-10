@@ -14,6 +14,7 @@ class ChefsController < ApplicationController
     else
       @chefs = Chef.all
     end
+
   end
 
   def show
@@ -37,6 +38,6 @@ class ChefsController < ApplicationController
   private
 
   def chef_params
-    params.require(:chef).permit(:name, :price, :location, :description, :photo, :avatar)
+    params.require(:chef).permit(:name, :price, :location, :description, :avatar, photos: [])
   end
 end
