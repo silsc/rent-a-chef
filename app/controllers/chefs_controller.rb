@@ -1,5 +1,5 @@
 class ChefsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @chefs = Chef.all
     @markers = @chefs.geocoded.map do |chef|
@@ -14,7 +14,6 @@ class ChefsController < ApplicationController
     else
       @chefs = Chef.all
     end
-
   end
 
   def show

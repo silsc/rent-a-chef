@@ -8,8 +8,8 @@
     <div class="d-flex  justify-content-between ">
       <% @chefs.each do |chef| %>
         <div class="card-chef mr-5">
-          <% if chef.photos.attached? %>
-            <%= cl_image_tag chef.photos.first.key %>
+          <% if chef.photo.attached? %>
+            <%= cl_image_tag chef.photo.key %>
           <% else %>
             <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
           <% end %>
