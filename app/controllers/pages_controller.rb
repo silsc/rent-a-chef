@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   end
 
   def styleguide
+  end
 
+  def featured
+    @chefs = Chef.all
   end
 end

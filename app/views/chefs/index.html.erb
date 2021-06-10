@@ -11,8 +11,8 @@
         <div class="col m-3">
           <%= link_to chef_path(chef) do  %>
             <div class="card-chef">
-              <% if chef.photo.attached? %>
-                <%= cl_image_tag chef.photo.key, class: "img-food" %>
+              <% if chef.photos.attached? %>
+                <%= cl_image_tag chef.photos.first.key, class: "img-food" %>
               <% else %>
                 <img src="https://i.pinimg.com/originals/f6/ba/9e/f6ba9e2c25ac835f8d9c681b01586cac.jpg" alt="">
               <% end %>

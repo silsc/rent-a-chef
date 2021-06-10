@@ -8,6 +8,13 @@ class ChefsController < ApplicationController
         lng: chef.longitude
       }
     end
+
+    if params[:query].present?
+      @chefs = Chef.search_by_location(params[:query])
+    else
+      @chefs = Chef.all
+    end
+
   end
 
   def show
@@ -31,6 +38,6 @@ class ChefsController < ApplicationController
   private
 
   def chef_params
-    params.require(:chef).permit(:name, :price, :location, :description, :photo, :avatar)
+    params.require(:chef).permit(:name, :price, :location, :description, :avatar, photos: [])
   end
 end
