@@ -3,18 +3,17 @@
 <div>
   <h1 class="text-center">Create a new chef profile</h1>
 </div>
-
 <div class="container col-6 col-lg-4">
-    <%= simple_form_for(@chef) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :location %>
-      <%= f.input :description %>
-      <%= f.input :price %>
-      <%= f.input :photo, as: :file %>
-      <div class="d-flex justify-content-between">
-        <%= f.submit "Create", class: "btn-flat border-0" %>
-        <%= link_to 'Back', chefs_path, class: "btn-flat" %>
-      </div>
-    <% end %>
+  <%= simple_form_for(@chef) do |f| %>
+    <%= f.input :name, placeholder: "Enter your first and last names" %>
+    <%= f.input :location, placeholder: "Add your location" %>
+    <%= f.input :description, placeholder: "Describe in few words who you are as a chef and your signature dishes" %>
+    <%= f.input :price, placeholder: "Add your price per day"%>
+    <%= f.input :photos, as: :file, input_html: {multiple: true} %>
+    <%= f.input :avatar, as: :file %>
+    <div class="d-flex justify-content-between">
+      <%= f.submit "Create", class: "btn-flat border-0" %>
+      <%= link_to 'Back', chefs_path, class: "btn-flat" %>
+    </div>
+  <% end %>
 </div>
-
