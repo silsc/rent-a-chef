@@ -12,8 +12,8 @@
     <%= f.input :photos, as: :file, input_html: {multiple: true} %>
     <%= f.input :avatar, as: :file %>
     <div class="d-flex justify-content-between">
-      <%= f.submit "Create", class: "btn-flat border-0" %>
-      <%= link_to 'Back', chefs_path, class: "btn-flat" %>
+      <%= f.submit "Create", class: "btn-flat border-0 px-5" %>
+      <%= link_to 'Back', chefs_path, class: "btn-flat-secondary" %>
     </div>
   <% end %>
 </div>
