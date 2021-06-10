@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :chefs, only: [:new, :create, :index, :show]
 
   get '/styleguide', to: 'pages#styleguide'
+  get '/featured', to: 'pages#featured'
 end
