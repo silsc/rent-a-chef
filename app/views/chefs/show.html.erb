@@ -15,6 +15,17 @@
         </div>
         <h4>About me</h4>
         <p><%= @chef.description %> </p>
+        <div class="review">
+        <% @chef.reviews.each do |review| %>
+              <% review.rating.times do %>
+                <i class="fas fa-pizza-slice"></i>
+              <% end %>
+              <div class="review-comment">
+                <em>"<%= review.content %>"</em>
+            </div>
+          <hr>
+          <% end -%>
+        </div>
       </div>
     </div>
     <div class="col-6">
