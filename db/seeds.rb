@@ -20,13 +20,11 @@ gordon.photos.attach(io: file, filename: 'gordon_ramsay_dish1.jpg', content_type
 gordon.photos.attach(io: file1, filename: 'gordon_ramsay_dish2.jpg', content_type: 'image/jpg')
 gordon.avatar.attach(io: avatar, filename: 'gordon_ramsay_avatar.jpg', content_type: 'image/jpg')
 
-
 file_two = URI.open('https://images.unsplash.com/photo-1534790566855-4cb788d389ec?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ4fHxjaGVmfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 avatar_two = URI.open('https://s1.eestatic.com/2019/06/19/cocinillas/actualidad-gastronomica/actualidad_gastronomica_407470914_125942795_1280x1280.jpg')
 martin = Chef.create!(user: User.first, name: 'Martin Berasategui', location: 'Basque', description: 'famous international chef, amazing food', price: 150.5)
 martin.photos.attach(io: file_two, filename: 'martin_berasategui.jpg', content_type: 'image/jpg')
 martin.avatar.attach(io: avatar_two, filename: 'martin_berasategui_avatar.jpg', content_type: 'image/jpg')
-
 
 file_three = URI.open('https://images.unsplash.com/photo-1601063458289-77247ba485ec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80')
 avatar_three = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UmMT3OIqmdfiM5zRLBUeLPmxzJKsuXDAqg&usqp=CAU')
@@ -34,13 +32,11 @@ yamamoto = Chef.create!(user: User.first, name: 'Seiji Yamamoto', location: 'Osa
 yamamoto.photos.attach(io: file_three, filename: 'yamamoto.jpg', content_type: 'image/jpg')
 yamamoto.avatar.attach(io: avatar_three, filename: 'yamamoto_avatar.jpg', content_type: 'image/jpg')
 
-
 file_four = URI.open('https://images.unsplash.com/photo-1559948271-7d5c98d2e951?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGFzaWFuJTIwZm9vZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 avatar_four = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUX2PpPfYZ4p6k7MdXKcEk-kGO7jqZ6lLrIA&usqp=CAU')
 nigella = Chef.create!(user: User.first, name: 'Nigella Lawson', location: 'Lisbon', description: 'famous international chef, amazing food', price: 400)
 nigella.photos.attach(io: file_four, filename: 'nigella.jpg', content_type: 'image/jpg')
 nigella.avatar.attach(io: avatar_four, filename: 'nigella_avatar.jpg', content_type: 'image/jpg')
-
 
 file_five = URI.open('https://images.unsplash.com/photo-1560180474-e8563fd75bab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 avatar_five = URI.open('https://www.rouxscholarship.co.uk/wp-content/uploads/2020/09/ClareSmythRouxScholarshipjudge_JodiHindsSQ-scaled.jpg')
@@ -91,5 +87,3 @@ puts "Users created: #{User.count}"
 puts "User bookings: #{Booking.count}"
 puts "Reviews: #{Review.count}"
 puts "Chefs: #{Chef.count}"
-
-

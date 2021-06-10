@@ -8,6 +8,13 @@ class ChefsController < ApplicationController
         lng: chef.longitude
       }
     end
+
+    if params[:query].present?
+      @chefs = Chef.search_by_location(params[:query])
+    else
+      @chefs = Chef.all
+    end
+
   end
 
   def show
