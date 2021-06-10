@@ -1,5 +1,4 @@
 /* CARD - CATEGORIES */
-
 .card-category {
   background-position: center;
   height: 160px;
@@ -12,7 +11,6 @@
   margin-bottom: 30px;
   object-fit: scale-down;
 }
-
 .cards {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
@@ -21,47 +19,49 @@
   align-items: center;
   margin-left: 88px;
 }
-
-
 /* CARD - CHEFS */
-
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: #FBC251 2px solid;
 }
-
 .card-chef {
   overflow: hidden;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  width: 20%;
-  min-width: 200px;
-  margin: auto;
+  width: 215px;
   border-radius: 24px;
-  margin-top: 30px;
+  color:black;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.04);
+  }
 }
-
+a:hover {
+  text-decoration: none;
+}
 .card-chef > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
-
-.card-chef h2 {
+.card-chef h4 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: #FF978E;
+  text-align: left;
 }
-
 .card-chef p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  text-align: left;
+  i {
+    color: #FF978E;
+  }
 }
-
-
 .card-chef .card-chef-infos {
   padding: 16px;
   display: flex;
@@ -69,20 +69,22 @@
   align-items: flex-end;
   position: relative;
 }
-
 .card-chef-infos .card-chef-user {
   position: absolute;
-  right: 16px;
+  right: 10px;
   top: -20px;
   width: 48px;
   height: 48px;
   object-fit: cover;
 }
-
 .card-chef-category {
-  text-align: right;
-  padding-right: 16px;
-  padding-bottom: 5px;
+  align-items: right;
 }
 
-
+.badge {
+  color: white;
+  text-shadow: silver;
+  background-color: #ff978eef;
+  text-align: center;
+  font-weight: 600;
+}
