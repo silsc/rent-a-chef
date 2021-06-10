@@ -7,28 +7,29 @@
     <h2> Popular Chefs near you </h2>
     <div class="d-flex  justify-content-between ">
       <% @chefs.each do |chef| %>
-        <div class="card-chef mr-5">
-          <% if chef.photo.attached? %>
-            <%= cl_image_tag chef.photo.key %>
-          <% else %>
-            <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
-          <% end %>
-          <div class="card-chef-infos">
-            <div>
-              <h2><%= link_to chef.name, chef_path(chef) %></h2>
-              <p><%= chef.location %></p>
-            </div>
-            <!-- <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZnxlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="card-chef-user avatar-bordered" /> -->
-            <% if chef.avatar.attached? %>
-              <%= cl_image_tag chef.avatar.key, class:"card-chef-user avatar-bordered" %>
+        <%= link_to chef_path(chef) do  %>
+          <div class="card-chef mr-5">
+            <% if chef.photos.attached? %>
+              <%= cl_image_tag chef.photos.first.key %>
             <% else %>
-              <img class="card-chef-user avatar-bordered" src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
+              <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
             <% end %>
+            <div class="card-chef-infos">
+              <div>
+                <h2><%= chef.name %></h2>
+                <p><%= chef.location %></p>
+              </div>
+              <% if chef.avatar.attached? %>
+                <%= cl_image_tag chef.avatar.key, class:"card-chef-user avatar-bordered" %>
+              <% else %>
+                <img class="card-chef-user avatar-bordered" src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
+              <% end %>
+            </div>
+            <div class="mr-2 text-right">
+              <span class="card-chef-category badge badge-pill badge-info m-2"> Italian Food</span>
+            </div>
           </div>
-          <div>
-            <h6 class="card-chef-category">Italian Food</h6>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
