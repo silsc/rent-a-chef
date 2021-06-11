@@ -4,13 +4,23 @@
 
 <div class="container my-4">
   <% @my_bookings.each do |my_booking| %>
-    <div class="card-product mb-3">
-      <%= cl_image_tag my_booking.chef.photos.first.key, class: "main-image" %>
-      <div class="card-product-infos">
-        <h2><%= my_booking.chef.name %></h2>
-        <p><%= my_booking.status.capitalize %></p>
+    <% unless cl_image_tag my_booking.chef.photos.nil? %>
+      <div class="card-product mb-3">
+        <%= cl_image_tag my_booking.chef.photos.first.key, class: "main-image" %>
+        <div class="card-product-infos">
+          <h2><%= my_booking.chef.name %></h2>
+          <p><%= my_booking.status.capitalize %></p>
+        </div>
       </div>
-    </div>
+    <% else %>
+        <div class="card-product mb-3">
+          <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="" class="main-image">
+          <div class="card-product-infos">
+            <h2><%= my_booking.chef.name %></h2>
+            <p><%= my_booking.status.capitalize %></p>
+          </div>
+        </div>
+    <% end %>
   <% end %>
 </div>
 
@@ -19,21 +29,39 @@
 
 <div class="container my-4">
   <% @my_chef_bookings.each do |my_chef_booking| %>
-    <div class="card-product mb-3">
-      <%= cl_image_tag my_chef_booking.chef.photos.first.key, class: "main-image" %>
-      <div class="card-product-infos">
-        <h2><%= my_chef_booking.chef.name %></h2>
-        <p class="mb-3"><%= my_chef_booking.status.capitalize %></p>
-        <% if my_chef_booking.status == "accepted"%>
-          <%= link_to "Decline", booking_path(my_chef_booking, booking: {status: "declined"}), method: :patch, class: "btn-flat"%>
-        <% elsif my_chef_booking.status == "pending"%>
-          <%= link_to "Accept", booking_path(my_chef_booking, booking: {status: "accepted"}), method: :patch, class: "btn-flat"%>
-          <%= link_to "Decline", booking_path(my_chef_booking, booking: {status: "declined"}), method: :patch, class: "btn-flat"%>
-        <% else %>
-          <%= link_to "Accept", booking_path(my_chef_booking, booking: {status: "accepted"}), method: :patch, class: "btn-flat"%>
-        <% end %>
+    <% unless cl_image_tag my_chef_booking.chef.photos.nil? %>
+      <div class="card-product mb-3">
+        <%= cl_image_tag my_chef_booking.chef.photos.first.key, class: "main-image" %>
+        <div class="card-product-infos">
+          <h2><%= my_chef_booking.chef.name %></h2>
+          <p class="mb-3"><%= my_chef_booking.status.capitalize %></p>
+          <% if my_chef_booking.status == "accepted"%>
+            <%= link_to "Decline", booking_path(my_chef_booking, booking: {status: "declined"}), method: :patch, class: "btn-flat"%>
+          <% elsif my_chef_booking.status == "pending"%>
+            <%= link_to "Accept", booking_path(my_chef_booking, booking: {status: "accepted"}), method: :patch, class: "btn-flat"%>
+            <%= link_to "Decline", booking_path(my_chef_booking, booking: {status: "declined"}), method: :patch, class: "btn-flat"%>
+          <% else %>
+            <%= link_to "Accept", booking_path(my_chef_booking, booking: {status: "accepted"}), method: :patch, class: "btn-flat"%>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% else %>
+       <div class="card-product mb-3">
+        <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="" class="main-image">
+        <div class="card-product-infos">
+          <h2><%= my_chef_booking.chef.name %></h2>
+          <p class="mb-3"><%= my_chef_booking.status.capitalize %></p>
+          <% if my_chef_booking.status == "accepted"%>
+            <%= link_to "Decline", booking_path(my_chef_booking, booking: {status: "declined"}), method: :patch, class: "btn-flat"%>
+          <% elsif my_chef_booking.status == "pending"%>
+            <%= link_to "Accept", booking_path(my_chef_booking, booking: {status: "accepted"}), method: :patch, class: "btn-flat"%>
+            <%= link_to "Decline", booking_path(my_chef_booking, booking: {status: "declined"}), method: :patch, class: "btn-flat"%>
+          <% else %>
+            <%= link_to "Accept", booking_path(my_chef_booking, booking: {status: "accepted"}), method: :patch, class: "btn-flat"%>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
