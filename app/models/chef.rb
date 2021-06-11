@@ -3,10 +3,13 @@ class Chef < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :reviews, through: :bookings
 
+  CATEGORIES = ["Dessert", "Asian", "Italian", "Vegetarian", "Fast Food"]
+
   has_many_attached :photos
   has_one_attached :avatar
 
   validates :name, :price, presence: true
+  validates :category, inclusion: {in: CATEGORIES}
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
