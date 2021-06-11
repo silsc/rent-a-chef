@@ -49,7 +49,7 @@ clare.avatar.attach(io: avatar_five, filename: 'clare_avatar.jpg', content_type:
 
 file_six = URI.open('https://images.unsplash.com/photo-1604382355076-af4b0eb60143?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBpenphfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 avatar_six = URI.open('https://smartcdn.prod.postmedia.digital/torontosun/wp-content/uploads/2020/10/Jamie-tomatoes-1-%C2%A92020-Jamie-Oliver-Enterprises-Ltd.-Photographer-Freddie-Claire-scaled-e1603502184276.jpg?quality=100&strip=all')
-jamie = Chef.create!(user: User.first, name: 'Jamie Oliver', category: 'Dessert', location: 'London', description: 'famous international chef, amazing food', price: 70)
+jamie = Chef.create!(user: User.first, name: 'Jamie Oliver', category: 'Fast Food', location: 'London', description: 'famous international chef, amazing food', price: 70)
 jamie.photos.attach(io: file_six, filename: 'jamie.jpg', content_type: 'image/jpg')
 jamie.avatar.attach(io: avatar_six, filename: 'jamie_avatar.jpg', content_type: 'image/jpg')
 
@@ -63,7 +63,7 @@ chris.avatar.attach(io: avatar_seven, filename: 'chris_avatar.jpg', content_type
 
 file_eight = URI.open('https://images.unsplash.com/photo-1511910849309-0dffb8785146?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXNpYW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 avatar_eight = URI.open('https://static.wixstatic.com/media/0807b7_320468befb07411da4f8036f3677c03d~mv2.jpg/v1/fill/w_970,h_590,al_c,q_90/0807b7_320468befb07411da4f8036f3677c03d~mv2.jpg')
-kei = Chef.create!(user: User.first, name: 'kei Oliver', category: 'Dessert', location: 'Barcelona', description: 'famous international chef, amazing food', price: 70)
+kei = Chef.create!(user: User.first, name: 'Kei Oliver', category: 'Asian', location: 'Barcelona', description: 'famous international chef, amazing food', price: 70)
 kei.photos.attach(io: file_eight, filename: 'kei.jpg', content_type: 'image/jpg')
 kei.avatar.attach(io: avatar_eight, filename: 'kei_avatar.jpg', content_type: 'image/jpg')
 
