@@ -98,7 +98,7 @@ reviews = [
 puts "Creating booking"
 
 Chef.all.each do |chef|
-    3.times do
+    2.times do
       booking = Booking.create!(user: User.all.sample, chef: chef, start_date: Date.today, end_date: Date.today + 10)
       review = Review.new(reviews.sample)
       review.booking = booking
