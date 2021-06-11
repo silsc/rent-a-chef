@@ -13,7 +13,7 @@ class ChefsController < ApplicationController
       if Chef::CATEGORIES.include?(params[:query])
         @chefs = Chef.where(category: params[:query])
       elsif
-        @chefs  = Chef.search_by_location(params[:query])
+        @chefs = Chef.search_by_location(params[:query])
       else
        @chefs = Chef.all
       end
