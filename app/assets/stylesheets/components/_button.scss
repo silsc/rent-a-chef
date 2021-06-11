@@ -16,16 +16,18 @@
 
 
 .btn-flat-secondary {
-  color: black;
+  color: #FF978E;
+  font-weight: 600;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #E5E5E5;
+  border: 2px solid #FF978E;
+  background: white;
   transition: background 0.3s ease;
 }
 
 .btn-flat-secondary:hover {
-  background: #FBC251;
-  color: white;
+  color: #FBC251;
+   border: 2px solid #FBC251;
 }
 
 .btn-landing:hover {

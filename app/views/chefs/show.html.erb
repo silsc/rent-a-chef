@@ -16,7 +16,7 @@
         <%= link_to 'Book now', new_chef_booking_path(@chef), class: "btn-flat mb-3"%>
         <h4 class="mt-5">About me</h4>
         <p><%= @chef.description %> </p>
-        <div class="review">
+        <div class="review mb-5">
         <% @chef.reviews.each do |review| %>
               <% review.rating.times do %>
                 <i class="fas fa-pizza-slice"></i>
@@ -28,6 +28,7 @@
           <% end -%>
         </div>
       </div>
+      <%= link_to 'Back to list', chefs_path, class: "btn-flat-secondary button-back-chef"%>
     </div>
     <div class="col-6">
       <% if @chef.photos.attached? %>
@@ -39,4 +40,4 @@
   </div>
 </div>
 
-<%= link_to 'Back to list', chefs_path, class: "btn-flat-secondary button-back-chef"%>
+
