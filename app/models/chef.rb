@@ -17,4 +17,8 @@ class Chef < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def category_check(params)
+    CATEGORIES.include?(params)
+  end
 end

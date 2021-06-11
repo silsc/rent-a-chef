@@ -9,12 +9,16 @@ class ChefsController < ApplicationController
       }
     end
 
-    if params[:query].present?
+  if params[:query].present?
+      # if query = somthing inside the array redirect to the link,
+    if category_check(params[:query])
+      @chefs = Chef.where(category: params[:query])
+    elsif
       @chefs = Chef.search_by_location(params[:query])
     else
-      @chefs = Chef.all
+     @chefs = Chef.all
     end
-  end
+ end
 
   def show
     @chef = Chef.find(params[:id])
