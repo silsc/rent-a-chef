@@ -2,7 +2,23 @@
 <%= render 'shared/banner' %>
 <div class="px-4">
   <h2>Browse by category</h2>
-  <%= render 'shared/categories' %>
+  <div class="cards">
+    <%= link_to chefs_path(:query => "Dessert")  do%>
+      <%= image_tag "doughnut.png", class: "card-category" %>
+      <% end %>
+    <%= link_to chefs_path(:query => "Asian") do%>
+      <%= image_tag "dim-sum.png", class: "card-category" %>
+    <% end %>
+    <%= link_to chefs_path(:query => "Italian") do%>
+      <%= image_tag "pasta.png", class: "card-category" %>
+    <% end %>
+    <%= link_to chefs_path(:query => "Vegetarian") do%>
+      <%= image_tag "ratatouille.png", class: "card-category" %>
+    <% end %>
+    <%= link_to chefs_path(:query => "Fast Food") do%>
+      <%= image_tag "burger-sandwich.png", class: "card-category" %>
+    <% end %>
+</div>
   <div class="my-5">
     <h2 class="mb-5">Popular Chefs</h2>
       <div class="d-flex">
