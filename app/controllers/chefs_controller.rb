@@ -5,7 +5,9 @@ class ChefsController < ApplicationController
     @markers = @chefs.geocoded.map do |chef|
       {
         lat: chef.latitude,
-        lng: chef.longitude
+        lng: chef.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { chef: chef }),
+        image_url: helpers.asset_url('chef_hat.png')
       }
     end
 
