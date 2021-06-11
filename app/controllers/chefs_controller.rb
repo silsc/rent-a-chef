@@ -10,10 +10,15 @@ class ChefsController < ApplicationController
     end
 
     if params[:query].present?
-      @chefs = Chef.search_by_location(params[:query])
-    else
-      @chefs = Chef.all
+      if Chef::CATEGORIES.include?(params[:query])
+        @chefs = Chef.where(category: params[:query])
+      elsif
+        @chefs  = Chef.search_by_location(params[:query])
+      else
+       @chefs = Chef.all
+      end
     end
+    # raise
   end
 
   def show
