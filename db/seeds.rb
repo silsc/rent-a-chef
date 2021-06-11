@@ -18,7 +18,7 @@ chefs = []
 file = URI.open('https://images.unsplash.com/photo-1587116861219-230ac19df971?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2468&q=80')
 file1 = URI.open('https://images.unsplash.com/photo-1607887908631-4672d100ee01?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxmb29kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 avatar = URI.open('https://dominicana.do/wp-content/uploads/2020/09/Gordon-Ramsay.png')
-gordon = Chef.create!(user: User.first, name: 'Gordon Ramsay', location: 'London', description: 'Specialized in gourmet, delicious, freaking good food', price: 200 )
+gordon = Chef.create!(user: User.first, name: 'Gordon Ramsay', location: 'London', description: "People think I'm an asshole. But in reality, I'm the greatest chef of them all. Love to travel around the world and elevate to a gourmet level any kind of food. Even a slug.", price: 200 )
 gordon.photos.attach(io: file, filename: 'gordon_ramsay_dish1.jpg', content_type: 'image/jpg')
 gordon.photos.attach(io: file1, filename: 'gordon_ramsay_dish2.jpg', content_type: 'image/jpg')
 gordon.avatar.attach(io: avatar, filename: 'gordon_ramsay_avatar.jpg', content_type: 'image/jpg')
@@ -91,6 +91,9 @@ reviews = [
   },
   {
     content: 'I am still dreaming about the dishes', rating: 5
+  },
+   {
+    content: 'I have no words. Magical chef!', rating: 5
   },
 ]
 
