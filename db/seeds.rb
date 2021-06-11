@@ -8,6 +8,9 @@ Review.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create!(email: 'carlos.mix@gmail.com', password: 'password')
+user2 = User.create!(email: 'silvia.mix@gmail.com', password: 'password')
+user3 = User.create!(email: 'iris.mix@gmail.com', password: 'password')
+user4 = User.create!(email: 'flavia.mix@gmail.com', password: 'password')
 
 
 puts "Creating chefs"
@@ -22,7 +25,7 @@ gordon.avatar.attach(io: avatar, filename: 'gordon_ramsay_avatar.jpg', content_t
 
 file_two = URI.open('https://images.unsplash.com/photo-1534790566855-4cb788d389ec?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ4fHxjaGVmfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 avatar_two = URI.open('https://s1.eestatic.com/2019/06/19/cocinillas/actualidad-gastronomica/actualidad_gastronomica_407470914_125942795_1280x1280.jpg')
-martin = Chef.create!(user: User.first, name: 'Martin Berasategui', location: 'Basque', description: 'famous international chef, amazing food', price: 150.5)
+martin = Chef.create!(user: User.first, name: 'Martin Berasate', location: 'Basque', description: 'famous international chef, amazing food', price: 150.5)
 martin.photos.attach(io: file_two, filename: 'martin_berasategui.jpg', content_type: 'image/jpg')
 martin.avatar.attach(io: avatar_two, filename: 'martin_berasategui_avatar.jpg', content_type: 'image/jpg')
 
@@ -43,6 +46,26 @@ avatar_five = URI.open('https://www.rouxscholarship.co.uk/wp-content/uploads/202
 clare = Chef.create!(user: User.first, name: 'Clare Smyth', location: 'London', description: 'famous international chef, amazing food', price: 57.8)
 clare.photos.attach(io: file_five, filename: 'clare.jpg', content_type: 'image/jpg')
 clare.avatar.attach(io: avatar_five, filename: 'clare_avatar.jpg', content_type: 'image/jpg')
+
+file_six = URI.open('https://images.unsplash.com/photo-1604382355076-af4b0eb60143?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBpenphfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+avatar_six = URI.open('https://smartcdn.prod.postmedia.digital/torontosun/wp-content/uploads/2020/10/Jamie-tomatoes-1-%C2%A92020-Jamie-Oliver-Enterprises-Ltd.-Photographer-Freddie-Claire-scaled-e1603502184276.jpg?quality=100&strip=all')
+jamie = Chef.create!(user: User.first, name: 'Jamie Oliver', location: 'London', description: 'famous international chef, amazing food', price: 70)
+jamie.photos.attach(io: file_six, filename: 'jamie.jpg', content_type: 'image/jpg')
+jamie.avatar.attach(io: avatar_six, filename: 'jamie_avatar.jpg', content_type: 'image/jpg')
+
+file_seven = URI.open('https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FrZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+file_seven2 = URI.open('https://images.unsplash.com/photo-1559620192-032c4bc4674e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNha2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+avatar_seven = URI.open('https://assets.entrepreneur.com/content/3x2/2000/20180831150545-ent18-oct-milkbar1.jpeg')
+chris= Chef.create!(user: User.first, name: 'Christina Tosi', location: 'Rome', description: 'cakes are my life and chocolate is my religion', price: 70)
+chris.photos.attach(io: file_seven, filename: 'chris.jpg', content_type: 'image/jpg')
+chris.photos.attach(io: file_seven2, filename: 'chris.jpg', content_type: 'image/jpg')
+chris.avatar.attach(io: avatar_seven, filename: 'chris_avatar.jpg', content_type: 'image/jpg')
+
+file_eight = URI.open('https://images.unsplash.com/photo-1511910849309-0dffb8785146?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXNpYW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+avatar_eight = URI.open('https://static.wixstatic.com/media/0807b7_320468befb07411da4f8036f3677c03d~mv2.jpg/v1/fill/w_970,h_590,al_c,q_90/0807b7_320468befb07411da4f8036f3677c03d~mv2.jpg')
+kei = Chef.create!(user: User.first, name: 'kei Oliver', location: 'Barcelona', description: 'famous international chef, amazing food', price: 70)
+kei.photos.attach(io: file_eight, filename: 'kei.jpg', content_type: 'image/jpg')
+kei.avatar.attach(io: avatar_eight, filename: 'kei_avatar.jpg', content_type: 'image/jpg')
 
 reviews = [
   {

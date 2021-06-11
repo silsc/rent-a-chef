@@ -6,7 +6,7 @@
 </div>
 <div class="content d-flex">
   <div class="container flex-grow-1">
-    <div class="row row-cols-5">
+    <div class="row row-cols-4 ml-2">
       <% @chefs.each do |chef| %>
         <div class="col m-3">
           <%= link_to chef_path(chef) do  %>
@@ -18,7 +18,7 @@
               <% end %>
               <div class="card-chef-infos">
                 <div>
-                  <h2><%= chef.name %></h2>
+                  <h4><%= chef.name %></h4>
                   <div class="d-flex">
                     <p><i class="fas fa-map-marker-alt m-1"></i></p>
                     <p><%= chef.location %></p>
@@ -39,9 +39,11 @@
       <% end %>
     </div>
   </div>
-  <div class="col" id="map"
-       style="width: 100%; height: 100vh; position: sticky;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="map-back sticky-top col-5 py-5 pl-5 pr-0 mt-3">
+    <div class="col sticky-top" id="map"
+         style="width: 100%; height: 100vh; position: sticky;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>

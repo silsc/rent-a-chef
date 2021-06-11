@@ -13,7 +13,8 @@
           <i class="fas fa-dollar-sign pr-2 icon-chef p-1"></i>
           <p><%= @chef.price %>/day</p>
         </div>
-        <h4>About me</h4>
+        <%= link_to 'Book now', new_chef_booking_path(@chef), class: "btn-flat mb-3"%>
+        <h4 class="mt-5">About me</h4>
         <p><%= @chef.description %> </p>
         <div class="review">
         <% @chef.reviews.each do |review| %>
@@ -37,4 +38,5 @@
     </div>
   </div>
 </div>
-<%= link_to 'Back to list', chefs_path, class: "btn-flat button-back-chef"%>
+
+<%= link_to 'Back to list', chefs_path, class: "btn-flat-secondary button-back-chef"%>

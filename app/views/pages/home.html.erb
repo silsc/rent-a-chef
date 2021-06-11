@@ -1,24 +1,21 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-landing ">
-    <div class="navbar-iconlogo-landing">
-      <i class="fas fa-utensils fa-3x navbar-icon"></i>
-    </div>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item mr-3 active">
-          <%= link_to "Log in", new_user_session_path, class: "btn btn-flat" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-flat" %>
-        </li>
-      </ul>
-    </div>
+  <div class="navbar-iconlogo-landing">
+    <i class="fas fa-utensils fa-3x navbar-icon"></i>
   </div>
-
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item mr-3 active">
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-flat btn-landing" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-flat btn-landing" %>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="col-12 p-0 m-0" style="position: absolute;top: 0px;z-index: 1;
 ">
   <div class="row full-banner-landing mr-0 ml-0">
@@ -26,19 +23,22 @@
       <%= image_tag "logo-big.png", class: "img-fluid big-logo"%>
     </div>
     <div class="col-6 half-banner-landing">
-      <span class="iconify food-landing-icon col-lg-9 icon-fluid" data-inline="false" data-icon="emojione-v1:pot-of-food" style="font-size: 12em;"></span>
-      <div class="pr-5">
-        <h2 class="text-right">Create <strong>memories</strong>,</h2>
-        <h2 class="text-right">enjoy the best food</h2>
-        <h2 class="text-right">from the bests chefs in your city</h2>
+      <div class="class d-block">
+        <div class="class text-left">
+          <span class="iconify food-landing-icon col-lg-9 icon-fluid" data-inline="false" data-icon="emojione-v1:pot-of-food" style="font-size: 12em;"></span>
+        </div>
+        <div class="pr-5">
+          <h2 class="text-right">Create <strong>memories</strong>,</h2>
+          <h2 class="text-right">enjoy the best food</h2>
+          <h2 class="text-right">from the bests chefs in your city</h2>
+        </div>
       </div>
       <div class="col-lg-12 pt-4 text-center">
-      <%= link_to "Search for a chef", chefs_path, class: "btn btn-flat" %>
+        <%= link_to "Search for a chef", chefs_path, class: "btn btn-flat btn-landing" %>
       </div>
     </div>
   </div>
 </div>
-
 <div class="pl-5 pt-5" style="margin-top:470px;">
   <h1>How does it work?</h1>
   <h3>If you’re a chef</h3>
@@ -80,5 +80,3 @@
     </div>
   </div>
 </div>
-
-
