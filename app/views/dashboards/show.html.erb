@@ -10,6 +10,7 @@
         <div class="card-product-infos">
           <h2><%= my_booking.chef.name %></h2>
           <p><%= my_booking.status.capitalize %></p>
+          <p class="mb-3">Total price is: <%= my_booking.total_price %> $</p>
         </div>
       </div>
     <% else %>
@@ -18,6 +19,7 @@
           <div class="card-product-infos">
             <h2><%= my_booking.chef.name %></h2>
             <p><%= my_booking.status.capitalize %></p>
+            <p class="mb-3">Total price is: <%= my_booking.total_price %></p>
           </div>
         </div>
     <% end %>
