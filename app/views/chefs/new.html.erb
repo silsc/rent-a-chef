@@ -9,6 +9,7 @@
     <%= f.input :location, placeholder: "Add your location" %>
     <%= f.input :description, placeholder: "Describe in few words who you are as a chef and your signature dishes" %>
     <%= f.input :price, placeholder: "Add your price per day"%>
+    <%= f.input :category, collection: Chef::CATEGORIES %>
     <%= f.input :photos, as: :file, input_html: {multiple: true} %>
     <%= f.input :avatar, as: :file %>
     <div class="d-flex justify-content-between">
