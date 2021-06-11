@@ -2,14 +2,6 @@ class ChefsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @chefs = Chef.all
-    @markers = @chefs.geocoded.map do |chef|
-      {
-        lat: chef.latitude,
-        lng: chef.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { chef: chef }),
-        image_url: helpers.asset_url('chef_hat.png')
-      }
-    end
 
     if params[:query].present?
       if Chef::CATEGORIES.include?(params[:query])
@@ -21,6 +13,14 @@ class ChefsController < ApplicationController
       end
     end
     # raise
+    @markers = @chefs.geocoded.map do |chef|
+      {
+        lat: chef.latitude,
+        lng: chef.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { chef: chef }),
+        image_url: helpers.asset_url('chef_hat.png')
+      }
+    end
   end
 
   def show
