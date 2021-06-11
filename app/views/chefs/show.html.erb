@@ -32,7 +32,32 @@
     </div>
     <div class="col-6">
       <% if @chef.photos.attached? %>
-        <%= cl_image_tag @chef.photos.first.key, class: "img-show" %>
+
+
+        <div id="carouselExampleIndicators" class="carousel slide mr-5" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          </ol>
+          <div class="carousel-inner">
+
+            <% @chef.photos.each do |photo| %>
+              <div class="carousel-item <%= @chef.photos.first.key == photo.key ? 'active' : ''  %>">
+                <%= cl_image_tag(photo.key)%>
+              </div>
+            <% end %>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
       <% else %>
         <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="" class="img-show">
       <% end %>
