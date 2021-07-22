@@ -16,97 +16,112 @@
     </ul>
   </div>
 </div>
-<div class="col-12 p-0 m-0" style="position: absolute;top: 0px;z-index: 1;">
-  <div class="row full-banner-landing mr-0 ml-0">
+<div class="col-12 p-0" style="position: absolute;top: 0px;z-index: 1;">
+  <div class="row full-banner-landing mx-0">
     <div class="col-6">
       <%= image_tag "logo-big.png", class: "img-fluid big-logo"%>
     </div>
     <div class="col-6 half-banner-landing">
-      <div class="class d-block">
-        <div class="class text-left">
-          <span class="iconify food-landing-icon col-lg-9 icon-fluid" data-inline="false" data-icon="emojione-v1:pot-of-food" style="font-size: 12em;"></span>
-        </div>
+      <div class="content">
+        <span class="iconify food-landing-icon icon-fluid" data-inline="false" data-icon="emojione-v1:pot-of-food" style="font-size: 12em;"></span>
         <div class="pr-5">
           <h2 class="text-right">Create <strong>memories</strong>,</h2>
           <h2 class="text-right">enjoy the best food</h2>
           <h2 class="text-right">from the bests chefs in your city</h2>
         </div>
       </div>
-      <div class="col-lg-12 pt-4 text-center">
-        <%= link_to "Search for a chef", chefs_path, class: "btn btn-flat btn-landing" %>
+      <div class="col  text-center px-0 pb-3" id ="search-chefs">
+        <%= link_to "Search", chefs_path, class: "btn btn-flat btn-landing" %>
       </div>
     </div>
   </div>
 </div>
 <div class="pt-5" style="margin-top:470px;">
-  <div class="pl-5">
-  <h1>How does it work?</h1>
-  <h3>If you’re a chef</h3>
-  <div class="card-container d-flex justify-content-around mr-5 my-5">
-    <div class="instruction-card text-center" style='background-image: url("https://i.postimg.cc/rwtH4bs9/bun.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-      <div class="text-instructions">
-        <div>
-          <h4>Step 1</h4>
-          <p>Create an account</p>
+  <div class="px-5 mt-5">
+    <h1>How does it work?</h1>
+    <h3>If you’re a chef</h3>
+    <%# card 1 %>
+    <div class="card-container my-5">
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/rwtH4bs9/bun.png" alt="bun" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 1</h4>
+            <p>Create an account</p>
+          </div>
+        </div>
+      </div>
+      <%# card2 %>
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/KjH9kryV/grilled-meat.png" alt="grilled-meat" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 2</h4>
+            <p>Create your profile</p>
+          </div>
+        </div>
+      </div>
+      <%# card3 %>
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/FKynWLjd/salad.png" alt="salad" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 3</h4>
+            <p>Receive bookings</p>
+          </div>
+        </div>
+      </div>
+      <%# card 4 %>
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/SRsTx1HC/hamburger-home.png" alt="burger" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 4</h4>
+            <p>Accept bookings</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="instruction-card text-center" style='background-image: url("https://i.postimg.cc/KjH9kryV/grilled-meat.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-      <div class="text-instructions">
-        <div>
-          <h4>Step 2</h4>
-          <p>Create your profile</p>
+    <h3>If you’re looking for a chef</h3>
+    <%# card5 %>
+    <div class="card-container my-5">
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/Kzmpd8N9/searching.png" alt="searching" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 1</h4>
+            <p>Create an account</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="instruction-card text-center" style='background-image: url("https://i.postimg.cc/FKynWLjd/salad.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-      <div class="text-instructions">
-        <div>
-          <h4>Step 3</h4>
-          <p>Receive bookings</p>
+      <%# card6 %>
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/B6N7sf7J/tracking.png" alt="tracking" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 2</h4>
+            <p>Search through the chefs</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="instruction-card text-center" style='background-image: url("https://i.postimg.cc/SRsTx1HC/hamburger-home.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-      <div class="text-instructions">
-        <div>
-          <h4>Step 4</h4>
-          <p>Accept bookings</p>
+      <%# card7 %>
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/3w5cFBDQ/cooking.png" alt="cooking" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 3</h4>
+            <p>Rent a chef</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <h3>If you’re looking for a chef</h3>
-  <div class="card-container d-flex justify-content-around mr-5 my-5">
-    <div class="instruction-card text-center" style='background-image: url("https://i.postimg.cc/Kzmpd8N9/searching.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-      <div class="text-instructions">
-        <div>
-          <h4>Step 1</h4>
-          <p>Create an account</p>
-        </div>
-      </div>
-    </div>
-    <div class="instruction-card text-center" style='background-image: url("https://i.postimg.cc/B6N7sf7J/tracking.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-      <div class="text-instructions">
-        <div>
-          <h4>Step 2</h4>
-          <p>Search through the chefs</p>
-        </div>
-      </div>
-    </div>
-    <div class="instruction-card text-center" style='background-image: url(" https://i.postimg.cc/3w5cFBDQ/cooking.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-       <div class="text-instructions">
-        <div>
-          <h4>Step 3</h4>
-          <p>Rent a chef</p>
-        </div>
-      </div>
-    </div>
-    <div class="instruction-card text-center" style='background-image: url("https://i.postimg.cc/v8q2NM6z/chef-home.png");background-size: 200px; background-repeat: no-repeat; background-position: center;'>
-       <div class="text-instructions">
-        <div>
-          <h4>Step 4</h4>
-          <p>Enjoy your chef</p>
+      <%# card8 %>
+      <div class="card-instructions">
+        <img src="https://i.postimg.cc/v8q2NM6z/chef-home.png" alt="chef" class="instruction-img">
+        <div class="text-instructions">
+          <div>
+            <h4>Step 4</h4>
+            <p>Enjoy your chef</p>
+          </div>
         </div>
       </div>
     </div>

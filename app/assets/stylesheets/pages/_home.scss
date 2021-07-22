@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 .navbar-landing {
   justify-content: space-between;
-  height: 120px;
+  height: 8rem;
   overflow: hidden;
   z-index: 5;
 }
@@ -11,73 +11,195 @@
 }
 
 .landing-container {
-  height: 300px;
+  height: 30rem;
   display: inline-block;
 }
 
 .full-banner-landing {
   max-width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .big-logo {
-  height: 550px;
-}
-
-.half-banner-landing {
-  background: #FBC251;
-  height: 550px;
-  border-bottom-left-radius: 80px;
-  color: white;
-}
-
-.food-landing-icon {
-  position: relative;
-  top: 80px;
-}
-
-.big-logo {
-  width: 40em;
+  width: 52rem;
   height: auto;
 }
 
+.half-banner-landing {
+  display: flex;
+  flex-direction: column;
+  background: #fbc251;
+  height: 48rem;
+  border-bottom-left-radius: 8rem;
+  color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 10rem 2rem 0 2rem;
+  overflow: hidden;
+}
+
+.food-landing-icon {
+  width: 40%;
+}
+
+#search-chefs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+
+  @include respond(tablet) {
+    flex-direction: column;
+  }
+}
+
 .instruction-card {
-  height: 250px;
-  width: 250px;
-  border-radius: 30px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.30);
-  background: white;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 3rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  background: $white;
   color: rgba(0, 0, 0, 0);
   font-weight: bold;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   margin: auto;
   object-fit: scale-down;
+
+  @include respond(tablet) {
+    margin-bottom: 2rem;
+  }
+
+  @include respond(phone) {
+    width: 80%;
+  }
+}
+
+.card-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .text-instructions {
   transition: opacity 0.5s ease;
   color: black;
   background-color: rgba(251, 194, 81, 0.8);
-  height: 250px;
-  width: 250px;
-  border-radius: 30px;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 3rem;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 3rem;
   opacity: 0;
   h4 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 4rem;
+  }
+
+  @include respond(tablet) {
+    margin-bottom: 2rem;
+
+    h4 {
+      font-size: 4rem;
+    }
+  }
+
+  @include respond(phone) {
+    width: 100%;
+
+    h4 {
+      font-size: 4rem;
+    }
   }
 }
 .text-instructions:hover {
   opacity: 1;
 }
 
-// .instruction-card > url:hover {
-//   opacity: 1;
-// }
+.card-instructions {
+  position: relative;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 3rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  background: $white;
+  color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  border: 1px solid #e5e5e5;
+  margin: auto;
+  object-fit: scale-down;
 
+  @include respond(tablet) {
+    margin-bottom: 2rem;
+  }
 
+  @include respond(phone) {
+    width: 80%;
+  }
 
+  .text-instructions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: black;
+    background-color: rgba(251, 194, 81, 0.8);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+
+    h4 {
+      font-weight: bold;
+      font-size: 4rem;
+    }
+
+    @include respond(tablet) {
+      margin-bottom: 2rem;
+
+      h4 {
+        font-size: 4rem;
+      }
+    }
+
+    @include respond(phone) {
+      width: 100%;
+
+      h4 {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .text-instructions:hover {
+    opacity: 1;
+  }
+
+  .instruction-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* absolute center*/
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 90%;
+    z-index: 1;
+  }
+}
