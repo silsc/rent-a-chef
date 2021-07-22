@@ -1,0 +1,13 @@
+h1 {
+  color: $color-header-white;
+  font-weight: bolder;
+  text-shadow: 0.3rem 0.3rem 0.5rem $color-salmon, -0.1rem 0 pink, 0 0.1rem pink,
+    0.1rem 0 pink, 0 -0.1rem pink;
+}
+
+h2 {
+  color: $color-header-white;
+  font-weight: bold;
+  text-shadow: 0.3rem 0.3rem 0.5rem $color-salmon, -0.1rem 0 pink, 0 0.1rem pink,
+    0.1rem 0 pink, 0 -0.1rem pink;
+}
