@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: calc(100vh - 100px);
+  overflow-x: hidden;
+}
+
+html {
+  // 1 rem size 10px
+  font-size: calc(100% - 6px);
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 60%;
+  }
+
+  @include respond(tablet) {
+    font-size: 60%;
+  }
+
+  @include respond(phone) {
+    font-size: 56%;
+  }
+
+  @include respond(phone-s) {
+    font-size: 40%;
+  }
+
+  @include respond(big-desktop) {
+    // 1rem = 12, 12/16
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}

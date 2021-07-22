@@ -1,32 +1,28 @@
 <h1> Navbar</h1>
-
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="navbar-iconlogo">
-    <i class="fas fa-utensils fa-3x navbar-icon"></i>
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "logo.png", class: "navbar-logo" %>
-    <% end %>
+  <div class="class d-flex">
+    <div class="navbar-iconlogo">
+      <i class="fas fa-utensils fa-3x navbar-icon"></i>
+      <%= link_to "#", class: "navbar-brand" do %>
+        <%= image_tag "logo.png", class: "navbar-logo" %>
+      <% end %>
+    </div>
   </div>
-
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-  <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
-  </div>
+    <div class="search-form-control form-group">
+      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+      <button name="button" type="submit" class="btn btn-flat">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
   <% end %>
-
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item mr-3 active">
-        <%= link_to "Create a chef profile", "#", class: "btn btn-flat" %>
+        <%= link_to "Create a chef", "#", class: "btn btn-flat" %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -38,16 +34,13 @@
               <p class="m-0">Log out</p>
             </div>
           <% end %>
-          </div>
+        </div>
       </li>
     </ul>
   </div>
 </div>
-
 <br>
-
 <h1> Footer</h1>
-
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
@@ -60,11 +53,8 @@
     This website was made with <i class="fas fa-heart"></i> by the Spotlight team
   </div>
 </div>
-
 <br>
-
 <h1>Cards - categories </h1>
-
 <div class="cards">
   <%= image_tag "doughnut.png", class: "card-category" %>
   <%= image_tag "dim-sum.png", class: "card-category" %>
@@ -72,11 +62,8 @@
   <%= image_tag "ratatouille.png", class: "card-category" %>
   <%= image_tag "burger-sandwich.png", class: "card-category" %>
 </div>
-
 <br>
 <h1>Cards - chefs</h1>
-
-
 <div class="card-chef">
   <img src="https://images.unsplash.com/photo-1587116861219-230ac19df971?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2468&q=80" />
   <div class="card-chef-infos">
@@ -90,13 +77,9 @@
     <h6 class="card-chef-category">Italian Food</h6>
   </div>
 </div>
-
 <h1>Top banner</h1>
 <div class="orange-banner"></div>
-
-
 <h1>CAROUSEL</h1>
-
 <div id="carouselExampleIndicators" class="carousel slide w-25 p-3" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
