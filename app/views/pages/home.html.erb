@@ -16,27 +16,25 @@
     </ul>
   </div>
 </div>
-<div class="col-12 p-0" style="position: absolute;top: 0px;z-index: 1;">
-  <div class="row full-banner-landing mx-0">
-    <div class="col-6">
-      <%= image_tag "logo-big.png", class: "img-fluid big-logo"%>
+<div class="row full-banner-landing mx-0">
+  <div class="big-logo">
+    <%= image_tag "logo-big.png", class: "img-fluid big-logo"%>
+  </div>
+  <div class="half-banner-landing">
+    <div class="content">
+      <span class="iconify food-landing-icon icon-fluid" data-inline="false" data-icon="emojione-v1:pot-of-food" style="font-size: 12em;"></span>
+      <div class="text-box">
+        <h2>Create <strong>memories</strong>,</h2>
+        <h2>enjoy the best food</h2>
+        <h2>from the bests chefs in your city</h2>
+      </div>
     </div>
-    <div class="col-6 half-banner-landing">
-      <div class="content">
-        <span class="iconify food-landing-icon icon-fluid" data-inline="false" data-icon="emojione-v1:pot-of-food" style="font-size: 12em;"></span>
-        <div class="pr-5">
-          <h2 class="text-right">Create <strong>memories</strong>,</h2>
-          <h2 class="text-right">enjoy the best food</h2>
-          <h2 class="text-right">from the bests chefs in your city</h2>
-        </div>
-      </div>
-      <div class="col  text-center px-0 pb-3" id ="search-chefs">
-        <%= link_to "Search", chefs_path, class: "btn btn-flat btn-landing" %>
-      </div>
+    <div class="col  text-center px-0" id ="search-chefs">
+      <%= link_to "Search", chefs_path, class: "btn btn-flat btn-landing" %>
     </div>
   </div>
 </div>
-<div class="pt-5" style="margin-top:470px;">
+<div class="pt-5" >
   <div class="px-5 mt-5">
     <h1>How does it work?</h1>
     <h3>If you’re a chef</h3>
