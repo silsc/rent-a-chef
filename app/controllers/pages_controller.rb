@@ -38,13 +38,13 @@ class PagesController < ApplicationController
     {
       title: 'Step 2',
       instruction: 'Create your profile<',
-      img_url: "https://i.postimg.cc/FKynWLjd/salad.png",
+      img_url: "https://i.postimg.cc/KjH9kryV/grilled-meat.png",
       alt: 'grilled meat'
     },
     {
       title: 'Step 3',
       instruction: 'Receive bookings',
-      img_url: "https://i.postimg.cc/3w5cFBDQ/cooking.png",
+      img_url: "https://i.postimg.cc/FKynWLjd/salad.png",
       alt: 'salad'
     },
     {

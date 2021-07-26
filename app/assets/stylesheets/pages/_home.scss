@@ -1,6 +1,8 @@
 // Specific CSS for your home-page
 .navbar-landing {
+  background: rgba(0, 0, 0, 0);
   justify-content: space-between;
+  width: 100%;
   height: 8rem;
   overflow: hidden;
   z-index: 5;
@@ -10,48 +12,83 @@
   flex-grow: 0;
 }
 
-.landing-container {
-  height: 30rem;
-  display: inline-block;
+.navbar-nav {
+  @include respond(tablet) {
+    flex-direction: row;
+  }
 }
 
 .full-banner-landing {
-  max-width: 100%;
+  margin-top: -8rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .big-logo {
   width: 52rem;
   height: auto;
+
+  @include respond(tablet) {
+    width: 44rem;
+    padding: 2rem;
+  }
 }
 
 .half-banner-landing {
   display: flex;
   flex-direction: column;
-  background: #fbc251;
-  height: 48rem;
+  background: $yellow;
+  width: 50%;
   border-bottom-left-radius: 8rem;
   color: white;
+
+  @include respond(tablet) {
+    border-top-left-radius: 8rem;
+    width: 100%;
+    margin-left: 4rem;
+  }
 }
 
 .content {
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 100%;
+  text-align: right;
   padding: 10rem 2rem 0 2rem;
   overflow: hidden;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem 4rem 1rem;
+    text-align: center;
+  }
 }
 
 .food-landing-icon {
-  width: 40%;
+  width: 100%;
+
+  @include respond(tablet) {
+    margin-bottom: 4rem;
+  }
 }
 
 #search-chefs {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3rem;
+  font-size: 1.6rem;
 }
 
 .card-container {
@@ -175,7 +212,7 @@
       margin-bottom: 2rem;
 
       h4 {
-        font-size: 4rem;
+        font-size: 6rem;
       }
     }
 
