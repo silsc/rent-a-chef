@@ -1,3 +1,22 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
+
+.content {
+  position: relative;
+  display: flex;
+  pad: 1rem;
+}
+
+.row-chefs {
+  flex-grow: 1;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.col-chefs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}

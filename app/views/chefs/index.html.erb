@@ -4,54 +4,57 @@
   <h1> In search of a gourmet meal? </h1>
   <h2>Rent a chef!</h2>
 </div>
-<div class="content d-flex">
-  <div class="container flex-grow-1">
-    <div class="row row-cols-4 ml-2">
-       <% if @chefs.empty? %>
-        <p class="mt-5 ml-5">There's no chef in your area.</p>
+<div class="content">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-8">
+      <div class="row row-chefs">
+        <% if @chefs.empty? %>
+          <p class="mt-5 ml-5">There's no chef in your area.</p>
           <p class="mt-5 ml-3">Want to add one?</p>
-        <h4></h4>
-        <h4></h4>
-        <%= link_to "Create a chef", new_chef_path, class: "btn btn-flat h-25 mt-5 ml-" %>
+          <h4></h4>
+          <h4></h4>
+          <%= link_to "Create a chef", new_chef_path, class: "btn btn-flat h-25 mt-5 ml-" %>
         <% else %>
-        <% @chefs.each do |chef| %>
-          <div class="col m-3">
-            <%= link_to chef_path(chef) do  %>
-              <div class="card-chef">
-                <% if chef.photos.attached? %>
-                  <%= cl_image_tag chef.photos.first.key, class: "img-food" %>
-                <% else %>
-                  <img src="https://images.unsplash.com/photo-1606325625602-2efd3bc49abd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="">
-                <% end %>
-                <div class="card-chef-infos">
-                  <div>
-                    <h4><%= chef.name %></h4>
-                    <div class="d-flex">
-                      <p><i class="fas fa-map-marker-alt m-1"></i></p>
-                      <p><%= chef.location %></p>
-                    </div>
-                  </div>
-                  <% if chef.avatar.attached? %>
-                    <%= cl_image_tag chef.avatar.key, class:"card-chef-user avatar-bordered" %>
+          <% @chefs.each do |chef| %>
+            <div class="col-12 col-md-6 col-lg-4 col-chefs">
+              <%= link_to chef_path(chef) do  %>
+                <div class="card-chef">
+                  <% if chef.photos.attached? %>
+                    <%= cl_image_tag chef.photos.first.key, class: "img-food" %>
                   <% else %>
-                    <img class="card-chef-user avatar-bordered" src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
+                    <img src="https://images.unsplash.com/photo-1606325625602-2efd3bc49abd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="">
                   <% end %>
+                  <div class="card-chef-infos">
+                    <div>
+                      <h4><%= chef.name %></h4>
+                      <div class="d-flex">
+                        <p><i class="fas fa-map-marker-alt m-1"></i></p>
+                        <p><%= chef.location %></p>
+                      </div>
+                    </div>
+                    <% if chef.avatar.attached? %>
+                      <%= cl_image_tag chef.avatar.key, class:"card-chef-user avatar-bordered" %>
+                    <% else %>
+                      <img class="card-chef-user avatar-bordered" src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fac1aab64-e6bd-3165-bd9f-9ecb9c4e66f2.jpg?crop=1500%2C1000%2C0%2C0&resize=1180" alt="">
+                    <% end %>
+                  </div>
+                  <div class="mr-2 text-right">
+                    <span class="card-chef-category badge badge-pill badge-info m-2"> <%= chef.category %></span>
+                  </div>
                 </div>
-                <div class="mr-2 text-right">
-                  <span class="card-chef-category badge badge-pill badge-info m-2"> <%= chef.category %></span>
-                </div>
-              </div>
-            <% end %>
-          </div>
+              <% end %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
-  </div>
-  <div class="map-back sticky-top col-5 py-5 pl-5 pr-0 mt-3">
-    <div class="col sticky-top" id="map"
-         style="width: 100%; height: 100vh; position: sticky;"
+    <div class="col-4 sticky-map">
+      <div class="map-back">
+        <div  id="map"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,8 +1,38 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 20rem;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.sticky-map {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+}
+
+.map-back {
+  background-color: $yellow;
+  position: relative;
+
+  width: 100rem;
+
+  overflow: hidden;
+  padding: 5rem 0 5rem 5rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 50rem;
+
+  @include respond(tab-land) {
+  }
+
+  @include respond(tablet) {
+  }
 }
