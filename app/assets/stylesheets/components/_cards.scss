@@ -38,8 +38,11 @@
     transform: scale(1.04);
   }
 
+  @include respond(tablet) {
+    width: 28rem;
+  }
   @include respond(phone) {
-    width: 70vw;
+    width: 80vw;
   }
 }
 a:hover {
@@ -88,7 +91,7 @@ a:hover {
 .badge {
   color: white;
   text-shadow: silver;
-  background-color: #ff978eef;
+  background-color: rgba($color-salmon, 0.7);
   text-align: center;
   font-weight: 600;
 }
