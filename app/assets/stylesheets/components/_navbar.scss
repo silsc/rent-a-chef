@@ -1,8 +1,16 @@
 .navbar-lewagon {
+  background: rgba(0, 0, 0, 0);
   justify-content: space-between;
-  background: $white;
-  height: 11.2rem;
-  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 5;
+  @include respond(tablet) {
+    flex-direction: row;
+
+    .navbar-nav {
+      justify-content: flex-end;
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,24 +27,25 @@
 }
 
 .navbar-logo {
-  width: 40%;
-  max-height: 14rem;
-  padding-bottom: 2rem;
+  position: absolute;
+  top: 1rem;
+  left: 8rem;
+  height: 6rem;
 }
 
 .logout-icon {
   color: $color-salmon;
 }
 
-.avatar {
-  margin-right: 3rem;
-}
-
 .search-form-control {
   display: flex;
   justify-content: flex-end;
   width: 50rem;
-  margin-top: 1.6rem;
+
+  @include respond(tablet) {
+    width: 30rem;
+    margin-left: 4rem;
+  }
 }
 
 .search-form-control .btn {
