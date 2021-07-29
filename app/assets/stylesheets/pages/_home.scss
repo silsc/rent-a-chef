@@ -63,7 +63,7 @@
   justify-content: space-between;
   align-items: flex-end;
   text-align: right;
-  padding: 10rem 2rem 0 2rem;
+  padding: 4rem 2rem 0 2rem;
   overflow: hidden;
 
   @include respond(tablet) {
@@ -76,7 +76,8 @@
 }
 
 .food-landing-icon {
-  width: 100%;
+  padding: 2rem;
+  font-size: 24rem;
 
   @include respond(tablet) {
     margin-bottom: 4rem;
