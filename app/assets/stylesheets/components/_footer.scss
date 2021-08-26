@@ -1,31 +1,37 @@
 .footer {
-  background: #FBC251;
-  border-radius: 0px 0px 80px 80px;
+  height: 10rem;
+  width: 100%;
+  background: $yellow;
+  border-radius: 0 0 80rem 80rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: white;
+  padding: 0 5rem;
+  color: $white;
   bottom: 0;
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: rgba($gray, 0.2);
+
   text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+  font-size: 2.4rem;
+  padding: 0 1rem;
 }
 .footer-links a:hover {
   opacity: 1;
-  color: white;
+  color: rgba($white, 0.8);
 }
 
 .footer .fa-heart {
-  color: #D23333;
+  color: rgba($red, 0.8);
+}
+
+.footer-copyright {
+  font-size: 1.2rem;
+  padding-left: 2rem;
 }

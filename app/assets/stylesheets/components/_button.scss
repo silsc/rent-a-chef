@@ -1,39 +1,45 @@
 .btn-flat {
-  color: white;
-  font-weight: 600;
-  padding: 8px 24px;
-  // margin-right: 16px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0.8rem 1.4rem;
   border-radius: 4px;
-  background: #FF978E;
+  background: $color-salmon;
+  box-shadow: 0 0.1rem 2rem rgba($color-salmon, 0.4);
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #FBC251;
+  background: $yellow;
   color: white;
   text-decoration: none;
 }
 
-
 .btn-flat-secondary {
-  color: #FF978E;
-  font-weight: 600;
-  padding: 8px 24px;
+  color: $color-salmon;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0.8rem 1.2rem;
   border-radius: 4px;
-  border: 2px solid #FF978E;
-  background: white;
+  border: 0.2rem solid $color-salmon;
+  box-shadow: 0 0.1rem 2rem rgba($color-salmon, 0.4);
+  background: $white;
   transition: background 0.3s ease;
 }
 
 .btn-flat-secondary:hover {
-  color: #FBC251;
-   border: 2px solid #FBC251;
+  color: $yellow;
+  border: 0.2rem solid $yellow;
 }
 
 .btn-landing:hover {
-  background: #FBC251;
-  color: white;
+  background: $yellow-dark;
+  color: $white;
   text-decoration: none;
-  border: 1px solid #FF978E;
+  border: 1px solid $color-salmon;
   border-radius: 4px;
 }
