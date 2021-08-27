@@ -4,13 +4,6 @@
   width: 100%;
   overflow: hidden;
   z-index: 5;
-  @include respond(tablet) {
-    flex-direction: row;
-
-    .navbar-nav {
-      justify-content: flex-end;
-    }
-  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -41,11 +34,6 @@
   display: flex;
   justify-content: flex-end;
   width: 50rem;
-
-  @include respond(tablet) {
-    width: 30rem;
-    margin-left: 4rem;
-  }
 }
 
 .search-form-control .btn {

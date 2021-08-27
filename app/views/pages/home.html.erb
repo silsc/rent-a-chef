@@ -1,8 +1,8 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-landing ">
+<div class="navbar navbar-expand-sm navbar-landing">
   <div class="navbar-iconlogo-landing">
-    <i class="fas fa-utensils fa-3x navbar-icon"></i>
+    <i class="fas fa-utensils fa-5x navbar-icon"></i>
   </div>
-  <ul class="navbar-nav">
+  <ul class="buttons-log d-flex list-unstyled">
     <li class="nav-item mr-3 active">
       <%= link_to "Log in", new_user_session_path, class: "btn btn-flat btn-landing" %>
     </li>
@@ -24,18 +24,17 @@
         <h2>from the bests chefs in your city</h2>
       </div>
     </div>
-    <div class="col  text-center px-0" id ="search-chefs">
+    <div class="col text-center px-0" id ="search-chefs">
       <%= link_to "Search", chefs_path, class: "btn btn-flat btn-landing" %>
     </div>
   </div>
 </div>
-<div class="pt-5" >
-  <div class="px-5 mt-5">
+  <div class="instructions-box">
     <h1>How does it work?</h1>
     <h3>If you’re a chef</h3>
-    <div class="card-container my-5">
+    <div class="card-container">
       <% @cards_rent_chef.each do |card| %>
-        <div class="card-instructions">
+        <div class="card-instructions mt-5">
           <img src="<%= card[:img_url]%>" alt="<%= card[:alt] %>" class="instruction-img">
           <div class="text-instructions">
             <div>
@@ -46,10 +45,10 @@
         </div>
       <% end %>
     </div>
-    <h3>If you’re looking for a chef</h3>
-    <div class="card-container my-5">
+    <h3 class="mt-5">If you’re looking for a chef</h3>
+    <div class="card-container">
       <% @cards_find_chef.each do |card| %>
-        <div class="card-instructions">
+        <div class="card-instructions mt-5">
           <img src="<%= card[:img_url]%>" alt="<%= card[:alt] %>" class="instruction-img">
           <div class="text-instructions">
             <div>
@@ -61,4 +60,4 @@
       <% end %>
     </div>
   </div>
-</div>
+
