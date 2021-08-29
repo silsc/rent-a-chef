@@ -55,15 +55,16 @@
     }
     .text-box {
       position: absolute;
-      right: 0;
       bottom: 13%;
       right: 10%;
       h2 {
         font-size: 2.5vw;
       }
       @include respond(phone) {
+        bottom: 10%;
+        right: 15%;
         h2 {
-          font-size: 5vw;
+          font-size: 4.5vw;
         }
       }
     }
